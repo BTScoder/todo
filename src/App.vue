@@ -6,7 +6,7 @@ import Menu from './components/Menu.vue'
 
 <template class="">
   <div class="h-full w-full flex items-center justify-center bg-gray-300">
-    <div class="grid grid-cols-2 w-3xl mx-auto rounded-2xl border-2 border-black overflow-hidden">
+    <div class="grid grid-cols-2 w-3xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
       <Menu />
       <Title />
     </div>

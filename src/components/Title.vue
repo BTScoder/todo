@@ -11,7 +11,7 @@ library.add(faUser, faHome, faBurger);
 <template>
     
     
-    <div class="container bg-gray-100 ">
+    <div class="container bg-gray-100 p-10">
         <!-- <div class="burger me-4 cursor-pointer">
             <font-awesome-icon :icon="['fas', 'burger']" class="text-black text-4xl" />
         </div> -->
