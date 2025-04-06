@@ -1,15 +1,20 @@
 <script setup>
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faUser, faHome, faBurger, faForward, faCalendar, faCalendarXmark } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faHome, faBurger, faForward, faCalendar, faCalendarXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 // Add the icon to the library
-library.add(faUser, faHome, faBurger, faForward, faCalendar, faCalendarXmark);
+library.add(faUser, faHome, faBurger, faForward, faCalendar, faCalendarXmark, faBars);
+
+
 </script>
 
 <template>
     <div class="menu bg-gray-100 p-10 ">
-        <h3 class="pb-10 text-4xl uppercase">Menu</h3>
+        <div class="flex items-center justify-between mb-10">
+            <h3 class=" text-4xl uppercase">Menu</h3>
+            <span><font-awesome-icon :icon="['fas','bars']" class="text-4xl text-black cursor-pointer"/></span>
+        </div>
 
         <h2 class="text-2xl uppercase">Tasks</h2>
         <div class="">
