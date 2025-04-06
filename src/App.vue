@@ -17,4 +17,6 @@ import Menu from './components/Menu.vue'
   
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
