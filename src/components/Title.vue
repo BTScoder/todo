@@ -11,11 +11,18 @@ library.add(faUser, faHome, faBurger);
 <template>
     
     
-    <div class="container bg-gray-100 p-10">
-        <!-- <div class="burger me-4 cursor-pointer">
-            <font-awesome-icon :icon="['fas', 'burger']" class="text-black text-4xl" />
-        </div> -->
-        <h1 class="text-4xl">Sticky Walls</h1>
+    <div class=" bg-gray-100 p-10">
+        <!-- Title -->
+        <div class="flex items-center justify-between">
+            <span @click="$emit('removeMenuBar')"><font-awesome-icon :icon="['fas','bars']" class="text-4xl text-black cursor-pointer"/></span>
+            <h1 class="text-4xl">Sticky Walls</h1>
+        </div>
+        
+        <!-- Sticky notes -->
+         <div>
+            
+         </div>
+
     </div>
 
 </template>
