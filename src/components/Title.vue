@@ -11,7 +11,7 @@ library.add(faUser, faHome, faBurger);
 <template>
     
     
-    <div class=" bg-gray-100 p-10">
+    <div class=" bg-gray-100 p-10 overflow-scroll">
         <!-- Title -->
         <div class="flex items-center justify-between">
             <span @click="$emit('removeMenuBar')"><font-awesome-icon :icon="['fas','bars']" class="text-4xl text-black cursor-pointer"/></span>
@@ -19,7 +19,26 @@ library.add(faUser, faHome, faBurger);
         </div>
         
         <!-- Sticky notes -->
-         <div>
+         <div class="container mx-auto grid grid-cols-3 gap-6 mt-10 text-center">
+            <div class="w-full h-[200px] bg-pink-300 rounded-2xl">
+                
+            </div>
+            <div class="w-full h-[200px] bg-pink-300 rounded-3xl">
+
+            </div>
+            <div class="w-full h-[200px] bg-pink-300 rounded-3xl">
+
+            </div>
+            <div class="w-full h-[200px] bg-pink-300 rounded-3xl">
+
+            </div>
+            <div class="w-full h-[200px] bg-pink-300 rounded-3xl">
+
+            </div>
+            <div class="w-full h-[200px] bg-pink-300 rounded-3xl">
+
+            </div>
+            
             
          </div>
 
