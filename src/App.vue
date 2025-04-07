@@ -14,7 +14,6 @@ const changeGrid = () => {
       <div class="grid grid-cols-[300px_596px] w-4xl h-[550px] mx-auto rounded-2xl overflow-hidden shadow-2xl" :class="{'grid':closeMenu}">
 
       <Menu class="" :class="[closeMenu ? 'hidden' : 'w-[300px]','transition-all duration-500']"/>
-      <!-- <Title @removeMenuBar="changeGrid()" :class="{'w-[896px]':closeMenu}"/> -->
        <Title  @removeMenuBar="changeGrid()" :class="[closeMenu ? 'w-[896px]' : 'w-[596px]', 'transition-all duration-500']"/>
 
       </div>
