@@ -8,7 +8,15 @@ library.add(faUser, faHome, faBurger, faPlus);
 
 import { ref, onMounted} from 'vue'
 const fakeTasks = ref([])
+const stickyColors = ref([
+    'bg-pink-100',
+    'bg-red-100',
+    'bg-blue-100',
+    'bg-yellow-100',
+    'bg-green-100'
+])
 
+// Fetch data from the API
  onMounted(async () => {
     try{
         const response = await fetch('https://dummyjson.com/todos')
@@ -20,6 +28,11 @@ const fakeTasks = ref([])
     }
  })
 
+
+// Creating the different sticky note colors
+const generateRandomNumber = () => {
+    return Math.floor(Math.random() * 4) + 1
+}
 </script>
 
 
@@ -42,7 +55,7 @@ const fakeTasks = ref([])
             </div>
 
             <div v-for="task in fakeTasks" :key="task">
-                <div class="w-full h-[200px] bg-gray-200 rounded-3xl p-2 relative">
+                <div class="w-full h-[200px] rounded-3xl p-2 relative shadow-xl" :class="stickyColors[generateRandomNumber()]">
                     <p><span>{{ task.id }}. </span>{{ task.todo }}</p>
                     <div class="absolute bottom-2 p-2">
                         <p class="text-center text-red-400" v-if="task.completed==false">Not completed</p>
