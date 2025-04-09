@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import Title from './components/Title.vue'
 import Menu from './components/Menu.vue'
-const closeMenu = ref(false)
+const closeMenu = ref(true)
 const changeGrid = () => {
     closeMenu.value = !closeMenu.value
 }
