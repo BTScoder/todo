@@ -55,16 +55,16 @@ const generateRandomNumber = () => {
         <!-- Sticky notes -->
         <div class="container mx-auto grid grid-cols-3 gap-6 mt-10 text-center">
             <div class="w-full h-[200px] bg-gray-300 rounded-2xl flex items-center justify-center ">
-                <span>
+                <router-link to="/inputTask">
                     <font-awesome-icon :icon="['fas','plus']" class="text-4xl text-black cursor-pointer"></font-awesome-icon>
-                </span>
+                </router-link>
             </div>
             <!-- Generated Fake Tasks -->
             <div v-for="(task, index ) in fakeTasks" :key="index">
                 <div class="w-full h-[200px] rounded-3xl p-2 relative shadow-xl" :class="stickyColors[generateRandomNumber()]">
                     <p><span>{{ task.id }}. </span>{{ task.todo }}</p>
                     <div class="absolute bottom-2 ms-2 flex items-center justify-between w-[90%]">
-                        <div class=" p-1 bg-gray-300 rounded-2xl cursor-pointer">
+                        <div class=" p-1 bg-gray-300 rounded-2xl cursor-pointer shadow-xl" @click="task.completed = !task.completed">
                             <p class="text-center text-sm" v-if="task.completed==false">Not completed</p>
                             <p class="text-center text-sm" v-else>Completed</p>
                         </div>
@@ -72,7 +72,6 @@ const generateRandomNumber = () => {
                             <span><font-awesome-icon :icon="['fas','trash']" class="text-lg text-red-300 me-5 transition-all duration-500 cursor-pointer hover:text-xl" @click="deleteTask(index)"></font-awesome-icon></span>
                             <span><font-awesome-icon :icon="['fas','pencil']" class="text-lg text-black transition-all duration-500 cursor-pointer hover:text-xl"></font-awesome-icon></span>
                         </div>
-                        
                     </div>
                 </div>
             </div>
